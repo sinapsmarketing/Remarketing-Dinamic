@@ -53,7 +53,7 @@ class sin_remarketing_dinamic
         $this->options = get_option( 'gcid_name' );
         ?>
         <div class="wrap">
-          <a target="_blank" href="http://www.sinaps.ro/?utm_source=plugin&utm_medium=link&utm_campaign=plugin_remarketing"><img src="sinaps-logo-15-s.png"  width="170px;"></a>   
+          <a target="_blank" href="http://www.sinaps.ro/?utm_source=plugin&utm_medium=link&utm_campaign=plugin_remarketing"><img src="<?php echo plugin_dir_url( __FILE__ ) . 'sinaps-logo-15-s.png'; ?>"  width="170px;"></a>   
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
@@ -61,7 +61,7 @@ class sin_remarketing_dinamic
                 do_settings_sections( 'remarketing_dinamic' );
                 submit_button(); 
             ?><h3> Example: </h3>
-            <img src="code.jpg" />
+            <img src="<?php echo plugin_dir_url( __FILE__ ) . 'code.jpg'; ?>" />
             </form>
         </div>
         <?php
